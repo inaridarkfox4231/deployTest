@@ -85,7 +85,12 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="_1">別のページ</h1>
-<p>表示されるでしょうか...心配。</p></div>
+<p>表示されるでしょうか...心配。<br />
+できた！一安心。じゃあちょっと数式を。<br />
+<script type="math/tex; mode=display">
+x^2+y^2=z^2
+</script>
+OKですね。インラインは<script type="math/tex">~a=1~</script>でできますね。</p></div>
             </div>
         </div>
 
@@ -98,6 +103,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js" defer></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
