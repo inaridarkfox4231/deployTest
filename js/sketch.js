@@ -1,5 +1,11 @@
 // p5jsのスケッチを作る
-let mySketch = p => {
+
+function createP5Sketch(sketch, id){
+    if(!document.getElementById(id)){ return; }
+    new p5(sketch, id);
+}
+
+createP5Sketch(p => {
     let bg;
     p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
@@ -14,8 +20,4 @@ let mySketch = p => {
     p.draw = () => {
         p.image(bg, 0, 0);
     }
-};
-
-if(document.getElementById("sketchArea0")){
-    new p5(mySketch, "sketchArea0");
-}
+}, "sketchArea0");
