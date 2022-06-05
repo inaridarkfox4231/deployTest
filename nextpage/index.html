@@ -79,6 +79,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#p5js" class="nav-link">p5jsのスケッチを表示する</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -90,8 +95,20 @@
 <script type="math/tex; mode=display">
 x^2+y^2=z^2
 </script>
-OKですね。インラインは<script type="math/tex">~a=1~</script>でできますね。確かに最新のMathJaxだと数式消えちゃいますね...mebiusboxさんの記事の通り。<br />
-というわけでやり直し。</p></div>
+OKですね。インラインは<script type="math/tex">~a=1~</script>でできますね。確かに最新のMathJaxだと数式消えちゃいますね...<br />
+mebiusboxさんの記事の通り。記事：<a href="https://zenn.dev/mebiusbox/articles/81d977a72cee01#%F0%9F%93%8C-github-pages">gh-pagesへのデプロイ</a><br />
+というわけでやり直し。無事表示されました。mdx_mathは外さなくていいっぽい...？</p>
+<h1 id="p5js">p5jsのスケッチを表示する</h1>
+<p>じゃあ本題。p5jsのスケッチを表示します。やり方はインスタンスモード。<br />
+はじめにp5jsとdocs内のsketch.jsをyml内で読み込む。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>extra_javascript: 
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    - https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js  # ここでp5jsを読み込む。minの方がいいね。
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    - js/sketch.js
+</code></pre></div></td></tr></table></div>
+次にスケッチの詳細。</p>
+<div id = "sketchArea0" style = "display: block; position: fixed; top: 0px; left: 0px; z-index: -1"></div></div>
             </div>
         </div>
 
@@ -105,6 +122,8 @@ OKですね。インラインは<script type="math/tex">~a=1~</script>ででき�
         </script>
         <script src="../js/base.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" defer></script>
+        <script src="../js/sketch.js" defer></script>
         <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
