@@ -13,7 +13,7 @@ createP5Sketch(p => {
         bg.colorMode(p.HSB, 100);
         bg.noStroke();
         for(let i = 0; i < 100; i++){
-            bg.fill(5, i/2, 100);
+            bg.fill(5, 100, i/2);
             bg.rect(0, bg.height*i/100, bg.width, bg.height/100);
         }
     }
