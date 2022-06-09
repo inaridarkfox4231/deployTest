@@ -1,0 +1,41 @@
+site_name: My Docs
+
+theme:
+    name: material
+    palette:
+        - scheme: slate
+          primary: light blue
+          accent: light green
+    font:
+        text: "Consolas"
+        code: "Consolas"
+
+# monokaiにしました。う～ん地味...
+markdown_extensions:
+    - mdx_math:
+        enable_dollar_delimiter: true
+    - pymdownx.highlight:
+        use_pygments: true
+        noclasses: true
+        pygments_style: monokai #monokaiだとちゃんとconsole.logに色が付いた。安心...
+        linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    # アイコン・絵文字の設定
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+    - Home: "index.md"
+    - Next: "nextpage.md"
+    - Anime: "animation.md"
+
+# 数式はバージョンを指定しないと駄目なようです。参考：https://zenn.dev/mebiusbox/articles/81d977a72cee01#%F0%9F%93%8C-github-pages
+# mdx_mathは外す必要ない？まあいいか。インラインも消えちゃうと不便だし。無事表示されました。
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
+    - https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js  # ここでp5jsを読み込む。minの方がいいね。
+    - js/sketch.js
+    - js/animation.js
