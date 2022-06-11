@@ -23,7 +23,7 @@ createP5Sketch(p => {
         for(let i = 0; i < 4; i++){
             btns[i].addEventListener("click", () => { shapeName = shapes[i]; randomShapeFlag = false; });
         }
-        btns[4].addEventListener("click", () => { randomShapeFlag = true; })
+        btns[4].addEventListener("click", () => { randomShapeFlag = true; });
     }
     p.draw = () => {
         p.clear();
