@@ -30,7 +30,7 @@ createP5Sketch(p => {
         const dx = p.mouseX - p.pmouseX;
         const dy = p.mouseY - p.pmouseY;
         if(p.mag(dx, dy) > 2){
-            createPoint(p.mouseX, p.mouseY, Math.random()*10-5, -8, 25);
+            createPoint(p.mouseX, p.mouseY, Math.random()*10-5, -20, 25);
         }
         updatePoints();
         drawPoints();
